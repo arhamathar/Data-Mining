@@ -6,8 +6,6 @@ def getdata(url):
     r = requests.get(url)
     return r.text
 
-dt = []
-d1 = []
 para = []
 infobox = []
 title = []
@@ -67,7 +65,8 @@ while count2 != 11:
     d = [title[count2], infobox[count2], para[count2]]
     datarow.append(d)
     count2 += 1
-    
+
+print(datarow)
 with open('wikipedia_scraper.csv', 'w', encoding ='UTF8') as f:
    writer = csv.writer(f)
    
